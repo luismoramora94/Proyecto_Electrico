@@ -36,23 +36,27 @@ int main (int argc, char *argv[])
 
     //enter required input values into SPA structure
 
-    spa.year          = 2003;
+    spa.year          = 2003; // A partir del 2018
+	// Iterables
     spa.month         = 10;
     spa.day           = 17;
     spa.hour          = 12;
     spa.minute        = 30;
     spa.second        = 30;
-    spa.timezone      = -7.0;
-    spa.delta_ut1     = 0;
-    spa.delta_t       = 67;
-    spa.longitude     = -105.1786;
-    spa.latitude      = 39.742476;
-    spa.elevation     = 1830.14;
-    spa.pressure      = 820;
-    spa.temperature   = 11;
-    spa.slope         = 30;
+
+	// Fijos para la antena
+
+    spa.timezone      = -6.0; // -6 para Costa Rica UTC 6
+    spa.delta_ut1     = 0; // WTF
+    spa.delta_t       = 67; // Who knows
+    spa.longitude     = -85.59611; // -85.5961111111111
+    spa.latitude      =  10.2833; // 10.283333333333333 antena
+    spa.elevation     = 3; // 3 msnm Santa Cruz
+    spa.pressure      = 995; // 995 hPa o millibares
+    spa.temperature   = 28; // 28 para guanacaste
+    spa.slope         = 30; // 0 si la base de concreto está nivelada
     spa.azm_rotation  = -10;
-    spa.atmos_refract = 0.5667;
+    spa.atmos_refract = 0.5667; // Valor tipico
     spa.function      = SPA_ALL;
 
     //call the SPA calculate function and pass the SPA structure
@@ -106,4 +110,3 @@ int main (int argc, char *argv[])
 //Sunset:        17:20:19 Local Time
 //
 /////////////////////////////////////////////
-
